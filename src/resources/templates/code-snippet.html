@@ -11,7 +11,8 @@
     <title>Code</title>
 </head>
 <body>
-<span id="load_date" th:text="${codeSnippet.date}"></span>
+<span id="load_date" th:text="${codeSnippet.date}"></span><br>
+<p>UUID: <span id="uuid" th:text="${codeSnippet.id}"></span></p>
 <pre><code id="code_snippet" th:text="${codeSnippet.code}">  </code></pre>
 
 </body>
