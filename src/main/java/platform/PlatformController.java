@@ -110,8 +110,6 @@ public class PlatformController {
                 }
                 if (codeSnippet.getTime() > 0) {
                     long timeSinceUpload = Duration.between(LocalDateTime.parse(codeSnippet.getDate(), formatter), LocalDateTime.now()).getSeconds();
-                    System.out.println(timeSinceUpload);
-                    System.out.println(codeSnippet.getTime());
                     if (timeSinceUpload > codeSnippet.getTime()) {
                         codeSnippetRepository.delete(codeSnippet);
                         return new ResponseEntity(HttpStatus.NOT_FOUND);
